@@ -1,24 +1,26 @@
 // No cambies los nombres de las funciones.
 
 function devolverPrimerElemento(array) {
-  // Devuelve el primer elemento de un  array (pasado por parametro)
-  // Tu código:
+  return array[0];
 }
 
 
 function devolverUltimoElemento(array) {
-  // Devuelve el último elemento de un array
-  // Tu código:
+  return array[array.length - 1]
 }
 
 
 function obtenerLargoDelArray(array) {
-  // Devuelve el largo de un array
-  // Tu código:
+  return array.length;
 }
 
 
 function incrementarPorUno(array) {
+  array = array;
+  for (i in array) {
+    i + 1;
+  }
+  return array;
   // "array" debe ser una matriz de enteros (int/integers)
   // Aumenta cada entero por 1
   // y devuelve el array
@@ -27,6 +29,7 @@ function incrementarPorUno(array) {
 
 
 function agregarItemAlFinalDelArray(array, elemento) {
+  return array.push(elemento);
   // Añade el "elemento" al final del array
   // y devuelve el array
   // Tu código:
@@ -34,6 +37,8 @@ function agregarItemAlFinalDelArray(array, elemento) {
 
 
 function agregarItemAlComienzoDelArray(array, elemento) {
+  var array = array;
+  return array.unshift(elemento);
   // Añade el "elemento" al comienzo del array
   // y devuelve el array
   // Pista: usa el método `.unshift`
@@ -42,6 +47,7 @@ function agregarItemAlComienzoDelArray(array, elemento) {
 
 
 function dePalabrasAFrase(palabras) {
+  return palabras.join(" ");
   // "palabras" es un array de strings/cadenas
   // Devuelve un string donde todas las palabras estén concatenadas
   // con espacios entre cada palabra
@@ -51,16 +57,32 @@ function dePalabrasAFrase(palabras) {
 
 
 function arrayContiene(array, elemento) {
+  var cheat = 0;
+  for (i in array) {
+    if (i == elemento) {
+      cheat++;
+    }
+  }
+  if (cheat == 0) {
+    return false;
+  }
+  else {
+    return true;
+  }
+    
   // Comprueba si el elemento existe dentro de "array"
   // Devuelve "true" si está, o "false" si no está
   // Tu código:
+  
 }
 
 
 function agregarNumeros(numeros) {
+  const sum = numeros.reduce((partial_sum, a) => partial_sum + a,0); 
   // "numeros" debe ser un arreglo de enteros (int/integers)
   // Suma todos los enteros y devuelve el valor
   // Tu código:
+  return sum;
 }
 
 
